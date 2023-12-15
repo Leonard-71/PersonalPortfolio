@@ -1,0 +1,42 @@
+.containerStudies {
+   display: flex;
+   flex-direction: column;
+   background-color: #030303ed;
+ 
+   .headingStudies {
+     padding-top: 3%;
+     text-align: center;
+     font-size: 90px;
+     color: rgba(247, 227, 227, 0.828);
+     margin-left: 2%;
+ 
+     span {
+       color: #2f89c6d8;
+     }
+   }
+ 
+   .timelineStudies {
+     max-width: 98%;
+   }
+ 
+   // Media queries pentru a face stilurile responsive
+   @media screen and (max-width: 768px) {
+     .headingStudies {
+       font-size: 50px;
+       margin-left: 0;
+     }
+     
+     .timelineStudies {
+      margin-left: 5%;
+       max-width: 90%;
+     }
+   }
+ 
+   @media screen and (max-width: 480px) {
+     .headingStudies {
+       font-size: 30px;
+     }
+     // Alte stiluri pentru ecranele mai mici
+   }
+ }
+ 

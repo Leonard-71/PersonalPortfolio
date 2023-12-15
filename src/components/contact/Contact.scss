@@ -1,0 +1,111 @@
+.contact {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #030303ed;
+    
+    .heading {
+        width: 100%;
+        margin-top: 10%;
+        text-align: center;
+        font-size: 4.5rem;
+        color: rgb(247, 227, 227);
+    }
+
+    span{
+        color:#2f8ac6;
+    }
+
+    form {
+        width: 100%; 
+        max-width: 55%;
+        margin: 1rem auto;
+        text-align: center;
+        margin-bottom: 3%;
+  
+      .input-box {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px;
+  
+        input,
+        textarea {
+          width: 100%;
+          padding: 20px;
+          font-size: 22px;
+          color: #ffffff;
+          background: #181c21;
+          border-radius: 18px;
+          margin-bottom: 1.5%;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: column;
+            width: 90%;
+    
+    
+            input:first-child {
+              margin-right: 1%;
+              margin-bottom: 1%; 
+            }
+          }
+          .btn {
+            display: inline-block;
+            padding: 6px 2px;
+            width: 25%;
+            background: #2f8ac6;
+            border-radius: 15px;
+            box-shadow: 0 0 8px #c5cbff;
+            font-size: 20px;
+            color: #000000;
+            letter-spacing: .1rem;
+            font-weight: 600;
+            transition: .5s ease;
+            margin: 0.5% auto 0; 
+            margin-bottom: 3%;
+            cursor: pointer;
+          }
+          
+          .btn:hover {
+            box-shadow: none;
+          }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+    .contact form .input-box .input-row {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  
+        .input-row {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+    
+            input {
+              width: 100%; 
+              margin-right: 0; 
+            }
+        }
+  
+    .contact form .input-box {
+      flex-direction: column;
+    }
+  }
+}
+  
+  @media screen and (max-width: 768px) {
+    .contact .heading {
+      font-size: 3rem;
+    }
+  
+    .contact form {
+      max-width: 80%;
+    }
+  }
+  
