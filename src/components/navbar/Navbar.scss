@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,400');
+@import url('@fortawesome/fontawesome-free/css/all.css');
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+#nav {
+  top: 0;
+  height: 70px;
+  width: 100%;
+  background: hsl(0, 0%, 5%);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    text-decoration: none;
+    color: hsl(0, 0%, 75%);
+  }
+  a:hover {
+    color:#2f8ac6;
+    text-shadow: 0 0 1px #bac0cd;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li,
+    label[for='toggle'] {
+      display: inline-block;
+      cursor: pointer;
+      color: hsl(0, 0%, 75%);
+      padding: 13px 10px 13px 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:last-child {
+        padding: 13px 25px 13px 25px;
+      }
+
+      &:hover {
+        color: #14b1bb;
+        text-shadow: 0 0 1px #bac0cd;
+      }
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 75%);
+  font-size: 24px; 
+  padding: 13px;
+
+  i {
+    color: #000000;
+    font-size: 32px;
+  }
+
+  #menu {
+    display: none;
+  }
+  
+  .show-menu {
+    display: block !important;
+
+    ul {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      width: 100%;
+      background: hsl(0, 0%, 5%);
+      border-radius: 8px;
+
+      li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid hsl(0, 0%, 15%);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+  
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    width: 60%;
+    background: hsl(0, 0%, 5%);
+    border-radius: 8px;
+    margin-left: 2%;
+
+    li {
+      width: 50%;
+      text-align: center;
+      margin-left: 15%;
+      border-bottom: 1px solid hsl(0, 0%, 15%);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  .show-menu {
+    display: block;
+    
+    #menu {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #nav {
+    justify-content: flex-start; 
+  }
+  ul {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #nav {
+    justify-content: center;
+  }
+}

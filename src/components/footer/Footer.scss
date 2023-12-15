@@ -1,0 +1,63 @@
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+.footer {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: hsl(0, 0%, 5%);
+  height: 60px;
+  position: relative;
+  width:100%;
+  padding-bottom: 16px;
+}
+
+.footer .text p {
+  font-size: 12px;
+  color: #ffffff2e;
+  padding-left: 30px;
+  margin-top: 10%;
+}
+
+.footer .iconTop {
+  font-size: 0;
+  padding-right: 30px;
+}
+
+.footer .iconTop a {
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #12949e;
+  border-radius: 12px;
+  transition: .5s ease;
+  font-size: 23px;
+  color: #1f242d;
+}
+
+.footer .iconTop a:hover {
+  box-shadow: 0 0 6px rgb(56, 155, 255);
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: auto;
+    padding: 15px;
+  }
+
+  .footer .iconTop {
+    padding: 10px 0;
+  }
+
+  .footer .text p {
+    margin-right: 1%;
+    padding-right: 0;
+  }
+}

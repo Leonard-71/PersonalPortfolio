@@ -1,0 +1,147 @@
+$facebook-blue: #3b5998;
+$facebook-hover-blue: #2f89c6;
+$instagram-purple: #bc2a8d;
+$instagram-hover-purple: #8a3ab9;
+$linkedin-blue: #3297c6;
+$linkedin-hover-blue: #0077B5;
+$icon-size: 42px;
+$icon-size-hover: 35px;
+
+
+.container-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #181c21;
+  
+
+  .about-image {
+    width: 40%;
+
+    .larger-image {
+      margin-left: 2%;
+      width: 95%;
+      transition: transform .2s;
+      margin: 0 auto;
+    }
+
+    .larger-image:hover  {
+      transform: scale(1.1);
+    }
+
+    .social-icons {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-10%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 6%;
+      gap:40px;
+
+      > svg {
+        font-size: $icon-size;
+        margin: 0 20px;
+        transition: transform 0.4s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2);
+          
+        }
+      }
+
+      .icon-facebook {
+        color: $facebook-blue;
+        font-size: $icon-size;
+
+        &:hover {
+          color: $facebook-hover-blue;
+          transform: scale(1.4);
+        }
+      }
+
+      .icon-instagram {
+        color: $instagram-purple;
+        font-size: $icon-size;
+
+        &:hover {
+          color: $instagram-hover-purple;
+          transform: scale(1.4);
+        }
+      }
+
+      .icon-linkedin {
+        color: $linkedin-blue;
+        font-size: $icon-size;
+
+        &:hover {
+          color: $linkedin-hover-blue;
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+
+  .desc-about {
+    color: antiquewhite;
+    width: 60%;
+
+    .heading-about {
+      text-align: center;
+      font-size: 90px;
+      color: rgba(247, 227, 227, 0.828);
+      line-height: 1;
+
+      span {
+        color: #2f89c6d8;
+      }
+    }
+
+    h2 {
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 23px;
+      margin-top: 20px;
+      margin-right: 7%;
+    }
+
+    .read-more {
+      color: #2f89c6d8;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(81, 158, 222);
+        text-decoration: underline;
+      }
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 40px;
+    gap: 20px;
+
+    .about-image,
+    .desc-about {
+      width: 90%;
+    }
+
+    .about-image {
+      margin-bottom: 6%;
+
+      &:hover {
+        transform: scale(1, 1);
+      }
+    }
+  }
+}

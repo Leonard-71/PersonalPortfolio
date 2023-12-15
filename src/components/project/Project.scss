@@ -1,0 +1,36 @@
+
+.containerProject{
+    background: #181c21;
+    display: flex;
+    flex-direction: column;
+
+ 
+   .headingProject {
+     padding-top: 3%;
+     text-align: center;
+     font-size: 90px;
+     color: rgba(247, 227, 227, 0.828);
+     margin-left: 2%;
+ 
+     span {
+       color: #2f89c6d8;
+     }
+   }
+
+   .centered-container {
+    text-align: center;
+  }
+  
+  .white-text {
+    color: white;
+  }
+
+   
+}
+
+
+.container-projects{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}

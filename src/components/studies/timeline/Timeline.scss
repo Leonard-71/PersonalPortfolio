@@ -1,0 +1,99 @@
+
+/* Timeline.scss */
+
+.my-timeline .vertical-timeline::before {
+    top: unset !important; 
+    height: unset !important; 
+    margin-left: 2% !important;
+  }
+
+@media only screen and (min-width: 1170px)
+{
+  .vertical-timeline-element-icon {
+      width: 37px !important;
+      height: 37px !important;
+  }
+
+
+  .vertical-timeline-element:not(:last-child)::before {
+    left: 49% !important;
+    top: 45px !important;
+    margin-left: -2px !important;
+    padding-top: 11px !important;
+    border-radius: 25px !important;
+  }
+
+
+  /*
+   .vertical-timeline.vertical-timeline--two-columns .vertical-timeline-element:not(:last-child)::before {
+    left: 49% !important;
+    top: 40px !important;
+    padding-top: 50px !important;
+    padding-bottom: 10px !important;
+    margin-left: -2px !important;
+  }
+  */
+
+  .vertical-timeline-element-content {
+    margin-left: 14px !important;
+    margin-right: 34px !important;
+  }
+
+  .vertical-timeline-element {
+    margin: 1px; 
+  }
+
+  .vertical-timeline-element {
+    margin-top: 1% !important;
+  }
+
+  .vertical-timeline-element-content-arrow {
+    top: 12px !important;
+  }
+
+}
+
+
+
+
+.vertical-timeline::before {
+  background: transparent;
+}
+
+.done.vertical-timeline.vertical-timeline-custom-line::before {
+  background: #424242;
+}
+.undone.vertical-timeline.vertical-timeline-custom-line::before {
+  background: white;
+}
+.vertical-timeline {
+  width: 100% !important;
+}
+
+.done,
+.undone {
+  margin: unset;
+}
+
+
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline.vertical-timeline--two-columns
+    .vertical-timeline-element:not(:last-child)::before {
+    left: 50%;
+    top: 60px;
+    margin-left: -2px;
+  }
+}
+
+.vertical-timeline-element:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 17px;
+  height: calc(100%);
+  width: 5px;
+  background: white;
+}
+
+

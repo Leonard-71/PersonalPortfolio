@@ -1,0 +1,21 @@
+ .btnCV {
+    display: inline-block;
+    padding: 8px 15px;
+    width: auto;
+    background: #2f8ac6;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #c5cbff;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.5s ease;
+    margin: 0.5% auto 0;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.btnCV:hover {
+    box-shadow: none;
+  }
