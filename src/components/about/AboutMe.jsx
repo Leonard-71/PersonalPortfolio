@@ -3,7 +3,7 @@ import './AboutMe.scss';
 import imgPrincipala from '../assets/imgPrincipala.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const aboutMeData = {
   subheading: 'Junior Frontend Developer',
@@ -45,6 +45,10 @@ const AboutMe = () => {
       <div className="about-image">
         <img src={imgPrincipala} alt="About Me" className="larger-image" />
         <div className="social-icons">
+
+          <a href='https://github.com/Leonard-71' className="icon-github">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
           <a href='https://www.facebook.com/leonard.filip007' className="icon-facebook">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
@@ -54,6 +58,8 @@ const AboutMe = () => {
           <a href='https://www.linkedin.com/in/filip-leonard-26036726a' className="icon-linkedin">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
+
+          
         </div>
       </div>
       <div className="desc-about">

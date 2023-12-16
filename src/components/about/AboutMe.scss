@@ -4,6 +4,8 @@ $instagram-purple: #bc2a8d;
 $instagram-hover-purple: #8a3ab9;
 $linkedin-blue: #3297c6;
 $linkedin-hover-blue: #0077B5;
+$github-color:	#bed0d2;
+$github-hover-color:#545252;
 $icon-size: 42px;
 $icon-size-hover: 35px;
 
@@ -76,6 +78,17 @@ $icon-size-hover: 35px;
 
         &:hover {
           color: $linkedin-hover-blue;
+          transform: scale(1.4);
+        }
+      }
+
+
+      .icon-github{
+        color: $github-color;
+        font-size: $icon-size;
+
+        &:hover {
+          color: $github-hover-color;
           transform: scale(1.4);
         }
       }
