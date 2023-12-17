@@ -17,7 +17,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     const templateParams = {
       fullName: fullName,
       email: email,
@@ -26,20 +26,28 @@ const Contact = () => {
       message: message,
     };
     
-    
-
-    emailjs.send(
-      'service_iu5m7g6',
-      'template_9o0rnsk',
-      templateParams,
-      '20dGa_pNFR2PbiyXK'
-    )
-      .then((response) => {
-        console.log('E-mailul a fost trimis!', response.status, response.text);
-      }, (error) => {
-        console.error('Eroare la trimiterea e-mailului:', error);
-      });
+    emailjs
+      .send(
+        'service_iu5m7g6',
+        'template_9o0rnsk',
+        templateParams,
+        '20dGa_pNFR2PbiyXK'
+      )
+      .then(
+        (response) => {
+          console.log('E-mailul a fost trimis!', response.status, response.text);
+          setFullName('');
+          setEmail('');
+          setMobileNumber('');
+          setEmailSubject('');
+          setMessage('');
+        },
+        (error) => {
+          console.error('Eroare la trimiterea e-mailului:', error);
+        }
+      );
   };
+  
 
   return (
     <section id="contact" className="contact" >
@@ -49,54 +57,58 @@ const Contact = () => {
       </h2>
 
       <form onSubmit={sendEmail}>
+
         <div className="input-box">
-<input
-  type="text"
-  id="fullName"
-  name="fullName"
-  placeholder="Nume si Prenume"
-  value={fullName}
-  onChange={(e) => setFullName(e.target.value)}
-/>
 
-<input
-  type="email"
-  id="email"
-  name="email"
-  placeholder="Email"
-  value={email}
-  onChange={(e) => setEmail(e.target.value)}
-/>
+          <div className="input-row">
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Nume si Prenume"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+            />
 
-<input
-  type="number"
-  id="mobileNumber"
-  name="mobileNumber"
-  placeholder="Numar de telefon"
-  value={mobileNumber}
-  onChange={(e) => setMobileNumber(e.target.value)}
-/>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+        </div>
 
-<input
-  type="text"
-  id="emailSubject"
-  name="emailSubject"
-  placeholder="Subiectul emailului"
-  value={emailSubject}
-  onChange={(e) => setEmailSubject(e.target.value)}
-/>
+        <div className="input-row">
+          <input
+            type="number"
+            id="mobileNumber"
+            name="mobileNumber"
+            placeholder="Numar de telefon"
+            value={mobileNumber}
+            onChange={(e) => setMobileNumber(e.target.value)}
+          />
 
-<textarea
-  id="message"
-  name="message"
-  cols="30"
-  rows="7"
-  placeholder="Introduce-ți mesajul..."
-  value={message}
-  onChange={(e) => setMessage(e.target.value)}
->
-</textarea>
+          <input
+            type="text"
+            id="emailSubject"
+            name="emailSubject"
+            placeholder="Subiectul emailului"
+            value={emailSubject}
+            onChange={(e) => setEmailSubject(e.target.value)}
+          />
+        </div>
 
+        <textarea
+            id="message"
+            name="message"
+            cols="30"
+            rows="7"
+            placeholder="Introduce-ți mesajul..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)} >
+          </textarea>
 
           <input type="submit" value="Trimite" className="btn" />
         </div>
@@ -107,4 +119,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
