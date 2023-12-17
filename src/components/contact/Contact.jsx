@@ -19,12 +19,13 @@ const Contact = () => {
     e.preventDefault();
 
     const templateParams = {
-      fullName: 'Filip Leonard',
-      email: 'leonard.filip976@gmail.com',
-      mobileNumber: '0741935188',
-      emailSubject: 'Subject of the email',
-      message: 'gtrt', // Mesajul
+      fullName: fullName,
+      email: email,
+      mobileNumber: mobileNumber,
+      emailSubject: emailSubject,
+      message: message,
     };
+    
     
 
     emailjs.send(
@@ -49,43 +50,53 @@ const Contact = () => {
 
       <form onSubmit={sendEmail}>
         <div className="input-box">
-          <div className="input-row">
-            <input
-              type="text"
-              placeholder="Nume si Prenume"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+<input
+  type="text"
+  id="fullName"
+  name="fullName"
+  placeholder="Nume si Prenume"
+  value={fullName}
+  onChange={(e) => setFullName(e.target.value)}
+/>
 
-          <div className="input-row">
-            <input
-              type="number"
-              placeholder="Numar de telefon"
-              value={mobileNumber}
-              onChange={(e) => setMobileNumber(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Subiectul emailului"
-              value={emailSubject}
-              onChange={(e) => setEmailSubject(e.target.value)}
-            />
-          </div>
+<input
+  type="email"
+  id="email"
+  name="email"
+  placeholder="Email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
 
-          <textarea
-            cols="30"
-            rows="7"
-            placeholder="Introduce-ți mesajul..."
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}>
-          </textarea>
+<input
+  type="number"
+  id="mobileNumber"
+  name="mobileNumber"
+  placeholder="Numar de telefon"
+  value={mobileNumber}
+  onChange={(e) => setMobileNumber(e.target.value)}
+/>
+
+<input
+  type="text"
+  id="emailSubject"
+  name="emailSubject"
+  placeholder="Subiectul emailului"
+  value={emailSubject}
+  onChange={(e) => setEmailSubject(e.target.value)}
+/>
+
+<textarea
+  id="message"
+  name="message"
+  cols="30"
+  rows="7"
+  placeholder="Introduce-ți mesajul..."
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+>
+</textarea>
+
 
           <input type="submit" value="Trimite" className="btn" />
         </div>
