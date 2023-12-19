@@ -13,7 +13,7 @@ const data = [
     imageSrc: portofoliuPersonal,
     title: "Portofoliu personal",
     description: "Acest proiect reprezintă o aplicație web dinamică și interactivă, dezvoltată folosind biblioteca React și preprocesorul SCSS pentru a oferi o prezentare estetică și funcțională a experienței și abilităților mele.",
-    githubLink: 'https://github.com/Leonard-71?tab=repositories',
+    githubLink: 'https://github.com/Leonard-71/portofoliu-personal',
   },
 
   {
