@@ -1,7 +1,7 @@
 import React from 'react'
 import './Project.scss'
 import CardsList from './cardsList/CardsList';
-import DownloadCVButton from '../downloadCVButton/DownloadCVButton';
+import DownloadCVButton from '../project/downloadCVButton/DownloadCVButton';
 
 
 const Project = () => {

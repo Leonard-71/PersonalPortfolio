@@ -3,17 +3,18 @@ import CardProject from '../cardProject/CardProject';
 import './CardsList.scss';
 
 
-
-import portofoliuPersonal from '../../assets/portofoliuPersonal.png'
+ 
+import menClassBarbershop from '../../assets/menClassBarbershop.png'
 import siteCsu from '../../assets/siteCSU.png'
 import crlManolea from '../../assets/crlManolea.png'
 
 const data = [
+
   {
-    imageSrc: portofoliuPersonal,
-    title: "Portofoliu personal",
-    description: "Acest proiect reprezintă o aplicație web dinamică și interactivă, dezvoltată folosind biblioteca React și preprocesorul SCSS pentru a oferi o prezentare estetică și funcțională a experienței și abilităților mele.",
-    githubLink: 'https://github.com/Leonard-71?tab=repositories',
+    imageSrc: menClassBarbershop,
+    title: "Men Class Barbershop",
+    description: "Acest proiect este destinat gestionarii eficiente a activitatilor din frizeria MenClass.",
+    githubLink: 'https://github.com/Leonard-71/MenClassBarbershop',
   },
 
   {

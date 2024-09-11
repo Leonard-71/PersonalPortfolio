@@ -1,6 +1,6 @@
 import React from 'react';
 import './DownloadCVButton.scss';
-import CVFile from '../assets/CV-LeonardFilip.pdf'; 
+import CVFile from '../../assets/CV-LeonardFilip.pdf'; 
 
 const DownloadCVButton = () => {
   const onButtonClick = () => {
