@@ -22,15 +22,3 @@ const App = () => {
 
 export default App;
 
-
-/*
-import Studies from './components/studies/Studies';
-import Project from './components/project/Project';
-import Contact from './components/contact/Contact';
-import AboutMe from './components/aboutMe/AboutMe'
-<Route path="/aboutMe" element={<AboutMe />} />
-<Route path="/studies" element={<Studies />} />
-<Route path="/project" element={<Project />} />
-<Route path="/contact" element={<Contact />} />
-*/
-
